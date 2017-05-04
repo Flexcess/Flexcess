@@ -1,0 +1,6 @@
+﻿
+@mixin divider($height: 1px,$bg-color: $jetblack,$margin: 10px 0) {
+    height: $height;
+    background-color: $bg-color;
+    margin: $margin;
+}

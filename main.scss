@@ -1,0 +1,277 @@
+﻿@import "bourbon";
+@import "color-theme";
+@import "color/shades";
+@import "variables";
+@import "mixins/mixins";
+// @import "buttons";
+// @import "inputs";
+@import "fonts";
+@include makeColorClass($shades,"color");
+/*  Typography */
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+h1 {
+    font-size: $h1-font-size;
+}
+h2 {
+    font-size: $h2-font-size;
+}
+h3 {
+    font-size: $h3-font-size;
+}
+h4 {
+    font-size: $h4-font-size;
+}
+h5 {
+    font-size: $h5-font-size;
+}
+a{
+    text-decoration: none;
+    color: $link-color
+}
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+a:hover{
+    color: $link-color-hover;
+    text-decoration: underline;
+}
+.font-l {
+    font-size: 1.2em;
+}
+.font-xl {
+    font-size: 1.4em;
+}
+.font-xxl {
+    font-size: 1.6em;
+}
+.font-s {
+    font-size: .7em;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-2x{
+    font-size: 2em;
+}
+.font-3x{
+    font-size: 3em;
+}
+.font-thin{
+    font-weight: 100;
+}
+body{
+    @extend .font-main;
+}
+h1, h2, h3, h4, h5, h6{
+    // @extend .font-header; 
+    // @extend .font-thin;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media (max-width: $screen-tablet - 1) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+     @media (min-width: $screen-tablet) and (max-width: $screen-desktop - 1){
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: $header-color;
+    &.fixed{
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        & + .content{
+           margin-top: $content-offset;
+        }
+    }
+}
+.bg{
+   background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.t-center{
+    text-align: center;
+}
+.primary-center{
+    @include justify-content(center);
+}
+.primary-start{
+    @include justify-content(flex-start);
+}
+.primary-end{
+    @include justify-content(flex-end);
+}
+.secondary-center{
+    @include align-items(center);
+}
+.secondary-start{
+    @include align-items(flex-start);
+}
+.secondary-end{
+    @include align-items(flex-end);
+}
+.w-100{
+ width: 100%;   
+}
+ul, menu, dir, li, div{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+.container {
+    @media (min-width: $screen-tablet) {
+        max-width: $container-tablet;
+    }
+    @media (min-width: $screen-tablet-wide) {
+        max-width: $container-tablet-wide;
+    }
+    @media (min-width: $screen-desktop) {
+        max-width: $container-desktop;
+    }
+}
+section{
+   margin-top: 100px;
+   margin-bottom: 100px;
+    @media (max-width: $screen-tablet - 1) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+     @media (min-width: $screen-tablet) and (max-width: $screen-desktop - 1){
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+.flex{
+    @include display(flex);
+}
+.flex1{
+    @include flex(1 1 auto);
+}
+// Extra small grid
+// For extra small devices like smartphones.
+//@include make-grid(xs);
+@media (max-width: $screen-phone-wide) {
+    .hamburger{
+        max-height: 30px;
+    }
+    .logo{
+        max-height: 50px;
+    }
+    .hide-on-phone, .nav .links.list.h-list{
+        display: none;
+    }
+    .list.h-list li{
+        margin-left:5px;
+    }
+    .list.h-list li{
+        margin-top: 5px;
+    }
+    .#{$grid-column-prefix}-#{$grid-extra-small-prefix}-#{$grid-column-count} {
+        padding-right:0;
+    }
+    .#{$grid-container-name}{
+        padding-left:5px;
+        padding-right:5px;
+    }
+}
+// Small grid
+//For the small device range, from phones to tablets.
+@media (min-width: $screen-phone-wide + 1) and (max-width: $screen-tablet) {
+    .hide-on-tablet{
+        display: none;
+    }
+}
+// Medium grid
+//For the desktop device range.
+@media (min-width: $screen-tablet + 1) {
+    .hide-on-desktop{
+        display: none;
+    }
+}
+.flex-col{
+    @include flex-direction(column);
+}
+/*  Lists  */
+.list {
+    list-style: none;
+    @include display(flex);
+    @include flex-wrap(wrap);
+    &.v-list{
+        @extend .flex-col;
+        &.list-spacing-s{
+            &>li + li{
+                margin-top: $small;
+            }
+        }
+        &.list-spacing-md{
+            &>li{
+                margin-top: $medium;
+            }
+        }
+        &.list-spacing-l{
+            &>li + li{
+                margin-top: $large;
+            }
+        }
+        &.list-spacing-xl{
+            &>li + li{
+                margin-top: $xlarge;
+            }
+        }
+    }
+    &.h-list {
+        @include flex-direction(row);
+        li + li{
+                margin-left: $medium;
+        }
+        
+        &.list-spacing-s{
+            &>li + li{
+                margin-left: $small
+            }
+        }
+        &.list-spacing-md{
+            &>li + li{
+                margin-left: $medium
+            }
+        }
+        &.list-spacing-l{
+            &>li + li{
+                margin-left: $large
+            }
+        }
+        &.list-spacing-xl{
+            &>li + li{
+                margin-left: $xlarge
+            }
+        }
+    }
+}
+#logo{
+    max-height: 80px;
+}
+
+/*  Margin and padding classes */
+// @include marginalize(0,none,'margin');
+// @include marginalize($small,s,'margin');
+// @include marginalize($medium, md,'margin');
+// @include marginalize($large, l,'margin');
+// @include marginalize($xlarge,xl,'margin');
+// @include marginalize(0,none,'pad');
+// @include marginalize($small,s,'pad');
+// @include marginalize($medium, md,'pad');
+// @include marginalize($large, l,'pad');
+// @include marginalize($xlarge,xl,'pad');

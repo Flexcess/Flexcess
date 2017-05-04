@@ -1,0 +1,38 @@
+{
+  "name": "Flexcess",
+  "version": "1.0.0",
+  "description": "css framework sass",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yogatree/Flexcess"
+  },
+  "keywords": [
+    "css",
+    "sass"
+  ],
+  "author": "Shawn R D",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogatree/Flexcess/issues"
+  },
+  "homepage": "https://github.com/yogatree/Flexcess",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-remove-empty-lines": "0.0.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2"
+  },
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "node-bourbon": "^4.2.8",
+    "sass-autoprefixer": "^1.0.1"
+  }
+}

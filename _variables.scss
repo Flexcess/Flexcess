@@ -1,0 +1,69 @@
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+
+@function getBreakpoint($screen-size){
+    @if map_has_key($breakpoints, $screen-size) {
+        @return map-get($breakpoints, $screen-size);
+    } 
+    @warn "Unknown `#{$breakpoint}` in $breakpoints";
+}
+
+// Global 
+$small: 5px;
+$medium: 10px;
+$large: 15px;
+$xlarge:20px;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$screen-phone: getBreakpoint("phone");
+$screen-phone-wide: getBreakpoint("phone-wide");
+$screen-phablet: getBreakpoint("phablet");
+$screen-sm-tablet: getBreakpoint("tablet-small");
+$screen-tablet: getBreakpoint("tablet");
+$screen-tablet-wide: getBreakpoint("tablet-wide");
+$screen-desktop: getBreakpoint("desktop");
+$screen-desktop-wide: getBreakpoint("desktop-wide");
+$container-tablet: 750px;
+$container-tablet-wide: 950px;
+$container-desktop: 1180px;
+$container-fluid: 100%;
+$content-offset: 110px;
+
+//Font-sizes
+$body-font-size: 14px;
+$h1-font-size: 5em;
+$h2-font-size: 4.5em;
+$h3-font-size: 4em;
+$h4-font-size: 3.5em;
+$h5-font-size: 3em;
+
+// Colors 
+$primary-color: $primary-color-holder;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+$secondary-color: $secondary-color-holder;
+$success-color: $success-color-holder;
+$error-color: $error-color-holder;
+$link-color: $link-color-holder;
+$link-color-hover: $link-color-hover-holder;
+$body-font-color: $black;
+$body-background-color: $white;
+$header-color: $topbar-color;
+
+// Buttons 
+$button-bg-color-disabled: #DFDFDF;
+$button-color: $secondary-color;
+$button-color-disabled: #9F9F9F;
+$button-color-flat: #343434;
+$button-color-raised: #fff;
+$button-floating-size: 37px;
+$button-height: 36px;
+$btn-radius: 0;

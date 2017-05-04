@@ -1,0 +1,25 @@
+﻿
+@mixin padding($top: none, $right: none, $bottom: none, $left: none) {
+    padding-top: $top;
+
+    @if $right == none {
+        padding-right: $top;
+    }
+    @else {
+        padding-right: $right;
+    }
+
+    @if $bottom == none {
+        padding-bottom: $top;
+    }
+    @else {
+        padding-bottom: $bottom;
+    }
+
+    @if $left == none {
+        padding-left: $top;
+    }
+    @else {
+        padding-left: $left;
+    }
+}

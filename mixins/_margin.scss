@@ -1,0 +1,22 @@
+﻿
+@mixin marginalize($size, $class, $type:'margin') {
+    $property: if($type == "margin", "margin", "padding");
+    .#{$type}-#{$class}
+    {
+        &.#{$type}-top {
+            #{$property}-top: $size;
+        }
+        &.#{$type}-right {
+            #{$property}-right: $size;
+        }
+        &.#{$type}-bot {
+            #{$property}-bottom: $size;
+        }
+        &.#{$type}-left {
+            #{$property}-left: $size;
+        }
+        &.#{$type}-all {
+            #{$property}: $size;
+        }
+    }
+}

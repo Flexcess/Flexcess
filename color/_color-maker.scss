@@ -1,0 +1,57 @@
+// Color Classes
+
+// $color_type  (Example $blue) 
+// $color_value (Example "blue")
+// $color_choice (Example "lighten-5")
+// $color_family (Example $blue)
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid repeating map-get($colors, ...)
+
+@function color($color, $type) {
+    @if map-has-key($colors, $color) {
+        $curr_color: map-get($colors, $color);
+        @if map-has-key($curr_color, $type) {
+            @return map-get($curr_color, $type);
+        }
+    }
+    @warn "Unknown `#{name}` in $colors.";
+    @return null;
+}
+
+@mixin generateClass($color_type, $color_value, $class_name){
+    @if $color_type == "base" {
+        .bg-#{$class_name} {
+            background-color: $color_value;
+        }
+        .text-#{$class_name} {
+            color: $color_value;
+        }
+    }
+    @else {
+        .bg-#{$color_type} {
+            background-color: $color_value;
+        }
+    .text-#{$color_type} {
+        color: $color_value;
+    }
+}
+}
+
+// generate a class where family is a variable from the other color partials, 
+// name is the name desired for the generated class
+// color choice is a value from the color file
+@mixin makeColorClass($color_family, $class_name, $color_choice : 'all'){     
+    @if $color_choice != 'all'
+    {
+        @each $color_type, $color_value in $color-family{
+            @if($color_type == $color_choice){
+                @include generateClass($color_type, $color_value, $class_name)
+                    }
+        }
+    }@else {        
+        @each $color_type, $color_value in $color-family {
+            @include generateClass($color_type, $color_value, $class_name);
+        } 
+    }
+}

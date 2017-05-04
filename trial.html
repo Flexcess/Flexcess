@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yogatree</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="flexcess.css">
+    <link rel="icon" type="image/png" href="images/fav.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="default.js"></script>
+    <style>
+	    .bg-lighten-5{
+	    	padding: 15px;
+	    }
+	    h1, h2, h3, h4, h5, .italianno{
+		   font-family: 'Italianno', cursive!important;
+		   color: #676868;
+		   line-height: 1;
+		}
+        table.double-header {
+            border-collapse: collapse;
+        }
+        
+        .double-header th {
+            width: 150px;
+        }
+        
+        .double-header td,
+        .double-header th {
+            border: 1px #ddd solid;
+            padding: 10px;
+        }
+        
+        .double-header {
+            margin: 20px 0;
+        }
+        
+        @media all and (min-width: 990px) {
+            .double-header {
+                float: left;
+            }
+            .double-header~.double-header td,
+            .double-header~.double-header th {
+                border-left: 0;
+            }
+            .double-header~.double-header tr:first-child th:first-child {
+                display: none;
+            }
+            .double-header~.double-header tr:not(:first-child) th {
+                display: none;
+            }
+        }
+        
+        table.preset.double-header:nth-child(2n) td {
+            background: #A9D075;
+        }
+        
+        table.preset td.green {
+            background: #59B548!important;
+            color: #d7e4d1;
+        }
+    </style>
+</head>
+<body>
+	<header class="fixed">
+		<nav class="">
+            <div class="container hide-on-phone">
+                 <div class="row secondary-center">
+                    <div 
+                        <a href="#">
+                            <img src="images/logo.png" alt="Yogatree" id="logo">
+                        </a>
+                    </div>
+                    <div class="flex flex1 primary-end" style="text-align: right;">
+	                     <ul class="links list h-list list-spacing-xl secondary-end">
+	                   	  <li> 
+	                   	  	<div><a href="#" > Studio</a></div>
+	                   	  </li>
+	                   	  <li> 
+	                   	  	<div><a href="#" >Classes</a></div>
+	                   	  </li>
+	                   	  <li> 
+	                   	  	<div><a href="#" >Contact</a></div>
+	                   	  </li>
+	                   	  <li> 
+	                   	  	<div> 
+	                   	  		<a target="_blank" href="https://www.facebook.com/Yogatree-153466858049421/">
+	                           		<img style="width:20px;" src="images/Facebook-logo-black.png" alt="">
+	                        	</a>
+	                        </div>
+	                   	  </li>
+	                    </ul>    
+                    </div>
+                </div>
+            </div>
+             <div class="container hide-on-tablet hide-on-desktop topnav font-l" id="myTopnav">
+	            <div class="row">
+	                <div>
+	                    <a href="#">
+	                        <img class="logo" src="images/logo.png" alt="Yogatree">
+	                    </a>
+	                </div>
+	                <div class="drawer flex flex1 primary-end">
+		               <div>
+		               		<img class="hamburger" src="images/hamburger-green.png" alt="hamburger-menu">
+		               </div>
+	                </div>
+	            </div>
+	            <div id="sidemenu" class="relative">
+	                <div id="holder" class="pad-md pad-bot margin-l margin-top">
+	                	<ul class="list v-list list-spacing-l secondary-end">
+	                		<li>
+	                    		<div><a href="#studio">Studio</a></div>
+	                		</li>
+	                		<li>
+	                    		<div><a href="#classes">Classes</a></div>
+	                		</li>
+	                		<li>
+	                    		<div><a href="#contact">Contact</a></div>
+	                		</li>
+	                		<li>
+			                    <div>
+			                        <a target="_blank" href="https://www.facebook.com/Yogatree-153466858049421/">
+			                            <img style="width:20px;" src="images/Facebook-logo-black.png" alt="">
+			                        </a>
+			                    </div>
+	                		</li>
+	                	</ul>
+	                </div>
+	            </div>
+	        </div>
+        </nav>
+    </header>
+    <div class="content container">
+    	<section class="margin-none margin-top">
+    		<div class="t-center" id="studio">
+	            <h2 class="margin-none margin-top">You'll love this space</h2>
+	            <p class="">
+	                Yogatree’s yoga studio is thoughtfully designed to bring out the best in your yoga practice. The brainchild of Mayuri, who
+	                discovered yoga while recovering from a life threatening accident, Yogatree has all the elements necessary
+	                for a fulfilling yoga experience. Mayuri’s innate desire to help others with the knowledge that changed her
+	                own life is evident in the thought and love that has gone into designing every detail in the studio. She
+	                believes that everyday practice is key to understanding your body and benefiting from yoga. Every element
+	                at Yogatree — from the way the studio looks, smells, and feels — is designed to encourage daily practice.
+	            </p>
+	            <p class="">
+	                Come, experience this space for yourself and benefit from the fruit of the tree of yoga.
+	            </p>
+	        </div>
+    	</section>
+    </div>
+	<section>
+    	<div class="bg bg-class" style="background-image:url(images/class.jpg);"></div>
+	</section>
+    <div class="container">
+    	<section>
+    		<div class="t-center" id="classes">
+	            <h2 class="margin-none margin-top">Meet our teachers</h2>
+	            <p class="">
+	                At Yogatree, our teachers respect yoga for the positive change that it has brought to their lives. Trained in multiple styles
+	                of yoga, they are knowledgeable, experienced and great fun to train with. Their deep sense of empathy, by
+	                virtue of their own challenging journeys as yoga practitioners has helped them develop a strong connect with
+	                the students to help them grow and get better in their quest for a healthy body and a quiet mind. Each one
+	                brings in their unique style of teaching yoga. But what connects them is a deep personal experience of yoga
+	                and the missionary zeal to spread the benefits of yoga.
+	            </p>
+	        </div>
+    	</section>
+    </div>
+    <section>
+    	 <div class="bg bg-today flex flex-col" style="background-image:url(images/today.jpg);" id="booking">
+            <div class="container w-100 flex flex-col flex1 primary-center booking font-3x">
+                <h2 class="margin-none margin-top">Today</h2>
+                <div>
+                    <p class="font-light">IS A GOOD DAY TO START.</p>
+                    <p class="font-light">BOOK YOUR CLASS NOW!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
