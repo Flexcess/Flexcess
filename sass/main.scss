@@ -103,26 +103,29 @@ header{
 .t-center{
     text-align: center;
 }
-.primary-center{
+.axis-center{
     @include justify-content(center);
 }
-.primary-start{
+.axis-start{
     @include justify-content(flex-start);
 }
-.primary-end{
+.axis-end{
     @include justify-content(flex-end);
 }
-.secondary-center{
+.cross-center{
     @include align-items(center);
 }
-.secondary-start{
+.cross-start{
     @include align-items(flex-start);
 }
-.secondary-end{
+.cross-end{
     @include align-items(flex-end);
 }
 .w-100{
  width: 100%;   
+}
+input, textarea{
+    @include box-sizing(border-box);
 }
 ul, menu, dir, li, div{
     -webkit-margin-before: 0;
@@ -211,14 +214,12 @@ section{
     @include flex-wrap(wrap);
     &.rows{
         @extend .flex-col;
+        &>li{
+                margin-top: $medium;
+            }
         &.list-spacing-s{
             &>li{
                 margin-top: $small;
-            }
-        }
-        &.list-spacing-md{
-            &>li{
-                margin-top: $medium;
             }
         }
         &.list-spacing-l{
@@ -237,15 +238,9 @@ section{
         &>li {
                 margin-left: $medium;
         }
-        
         &.list-spacing-s{
             &>{
                 margin-left: $small
-            }
-        }
-        &.list-spacing-md{
-            &>li{
-                margin-left: $medium
             }
         }
         &.list-spacing-l{
@@ -265,13 +260,13 @@ section{
 }
 
 /*  Margin and padding classes */
-// @include marginalize(0,none,'margin');
-// @include marginalize($small,s,'margin');
-// @include marginalize($medium, md,'margin');
-// @include marginalize($large, l,'margin');
-// @include marginalize($xlarge,xl,'margin');
-// @include marginalize(0,none,'pad');
-// @include marginalize($small,s,'pad');
-// @include marginalize($medium, md,'pad');
-// @include marginalize($large, l,'pad');
-// @include marginalize($xlarge,xl,'pad');
+@include marginalize(0,none,'margin');
+@include marginalize($small,s,'margin');
+@include marginalize($medium, md,'margin');
+@include marginalize($large, l,'margin');
+@include marginalize($xlarge,xl,'margin');
+@include marginalize(0,none,'pad');
+@include marginalize($small,s,'pad');
+@include marginalize($medium, md,'pad');
+@include marginalize($large, l,'pad');
+@include marginalize($xlarge,xl,'pad');

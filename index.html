@@ -65,7 +65,9 @@
     <div class="container">
         <h4 class="font-thin">container</h4>
     	<section class="t-center">
-            <h5 class="font-thin">section</h5>
+            <h5 class="font-thin pad-s pad-left" style="text-align: left;">section</h5>
+            <h5 class="font-thin font-2x">Grid</h5>
+
     		<div class="row cols">
     			<div><div class=" bg-lighten-5">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back</div></div>
     			<div><div class=" bg-lighten-5"> It wasn't a dream. His room, a proper human room although a little too small</div></div>
@@ -221,25 +223,90 @@
     		</div>
         </section>
         <section>
-            <h5 class="font-thin t-center">section</h5>
+            <h5 class="font-thin t-center font-2x">Lists</h5>
             <div class="row">
                 <div class="tab-2col lg-1col bg-l">
                     <h5 class="font-xl font-thin">Horizontal List</h5>
-                    <ul class="list cols bg-lighten-5" style="text-align: left;">
-                        <li>One morning, when Gregor Samsa woke from troubled dreams, he found himself</li>
-                        <li>Col2: One morning, when </li>
-                        <li>Col3: One morning, troubled dreams, he found himself</li>
-                        <li>Col4: Gregor Samsa woke from troubled dreams </li>
+                    <ul class="list rows">
+                        <li>
+                            <ul class="list cols bg-lighten-5" style="text-align: left;">
+                                <li>One morning, when Gregor Samsa woke from troubled dreams, he found himself</li>
+                                <li>Col2: One morning, when </li>
+                                <li>Col3: One morning, troubled dreams, he found himself</li>
+                                <li>Col4: Gregor Samsa woke from troubled dreams </li>
+                            </ul>
+                        </li>
+                        <li>
+                             <textarea readonly="true" class="w-100" rows="7">
+                                <ul class="list cols bg-lighten-5">
+                                    <li>One morning, when Gregor Samsa woke from troubled dreams, he found himself</li>
+                                    <li>Col2: One morning, when </li>
+                                    <li>Col3: One morning, troubled dreams, he found himself</li>
+                                    <li>Col4: Gregor Samsa woke from troubled dreams </li>
+                                </ul>
+                             </textarea>
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-2col lg-1col">
                     <h5 class="font-xl font-thin">Vertical List</h5>
-                    <ul class="list rows bg-lighten-5" style="text-align: left;">
-                        <li>One morning, when Gregor Samsa woke from troubled dreams, he found himself</li>
-                        <li>Col2: One morning, when </li>
-                        <li>Col3: One morning, troubled dreams, he found himself</li>
-                        <li>Col4: Gregor Samsa woke from troubled dreams </li>
+                    <ul class="list rows">
+                        <li>
+                            <ul class="list rows bg-lighten-5" style="text-align: left;">
+                                <li>One morning, when Gregor Samsa woke from troubled dreams, he found himself</li>
+                                <li>Col2: One morning, when </li>
+                                <li>Col3: One morning, troubled dreams, he found himself</li>
+                                <li>Col4: Gregor Samsa woke from troubled dreams </li>
+                            </ul>
+                        </li>
+                        <li>
+                             <textarea readonly="true" class="w-100" rows="7">
+                                <ul class="list rows bg-lighten-5">
+                                    <li>One morning, when Gregor Samsa woke from troubled dreams, he found himself</li>
+                                    <li>Col2: One morning, when </li>
+                                    <li>Col3: One morning, troubled dreams, he found himself</li>
+                                    <li>Col4: Gregor Samsa woke from troubled dreams </li>
+                                </ul>
+                            </textarea>
+                        </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h5 class="font-thin t-center">Alignment</h5>
+            <div class="row cols">
+                <div>
+                    <div>
+                        <h5 class="font-xl font-thin">Horizontal Center</h5>
+                        <div class="flex axis-center bg-lighten-5"  style="height: 100px">flex axis-center</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h5 class="font-xl font-thin">Vertical Center</h5>
+                        <div class="flex cross-center bg-lighten-5"  style="height: 100px">flex cross-center</div>
+                    </div>
+                </div>
+                 <div>
+                    <div>
+                        <h5 class="font-xl font-thin">Center</h5>
+                        <div class="flex cross-center axis-center bg-lighten-5" style="height: 100px">flex cross-center axis-center</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cols">
+                <div>
+                    <div>
+                        <h5 class="font-xl font-thin">Horizontal End</h5>
+                        <div class="flex axis-end bg-lighten-5"  style="height: 100px">flex axis-end</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h5 class="font-xl font-thin">Vertical End</h5>
+                        <div class="flex cross-end bg-lighten-5"  style="height: 100px">flex cross-end</div>
+                    </div>
                 </div>
             </div>
         </section>
