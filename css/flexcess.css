@@ -517,16 +517,16 @@ section {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.list.rows > li {
+.list.rows > li:not(:first-child) {
     margin-top: 10px;
 }
-.list.rows.list-spacing-s > li {
+.list.rows.list-spacing-s > li:not(:first-child) {
     margin-top: 5px;
 }
-.list.rows.list-spacing-l > li {
+.list.rows.list-spacing-l > li:not(:first-child) {
     margin-top: 15px;
 }
-.list.rows.list-spacing-xl > li {
+.list.rows.list-spacing-xl > li:not(:first-child) {
     margin-top: 20px;
 }
 .list.cols {
@@ -534,16 +534,16 @@ section {
     flex-direction: row;
     -ms-flex-direction: row;
 }
-.list.cols > li {
+.list.cols > li:not(:first-child) {
     margin-left: 10px;
 }
-.list.cols.list-spacing-s > {
+.list.cols.list-spacing-s > li:not(:first-child) {
     margin-left: 5px;
 }
-.list.cols.list-spacing-l > li {
+.list.cols.list-spacing-l > li:not(:first-child) {
     margin-left: 15px;
 }
-.list.cols.list-spacing-xl > li {
+.list.cols.list-spacing-xl > li:not(:first-child) {
     margin-left: 20px;
 }
 #logo {
