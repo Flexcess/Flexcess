@@ -6,7 +6,7 @@ var cssbeautify = require('gulp-cssbeautify');
 var removeEmptyLines = require('gulp-remove-empty-lines');
 
 gulp.task('sass', function() {
-    gulp.src('./*.scss')
+    gulp.src('./sass/main.scss')
         .pipe(sass({
             includePaths: require('node-bourbon').includePaths
         }))
