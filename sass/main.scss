@@ -209,10 +209,10 @@ section{
     list-style: none;
     @include display(flex);
     @include flex-wrap(wrap);
-    &.v-list{
+    &.rows{
         @extend .flex-col;
         &.list-spacing-s{
-            &>li + li{
+            &>li{
                 margin-top: $small;
             }
         }
@@ -222,39 +222,39 @@ section{
             }
         }
         &.list-spacing-l{
-            &>li + li{
+            &>li{
                 margin-top: $large;
             }
         }
         &.list-spacing-xl{
-            &>li + li{
+            &>li{
                 margin-top: $xlarge;
             }
         }
     }
-    &.h-list {
+    &.cols {
         @include flex-direction(row);
-        li + li{
+        &>li {
                 margin-left: $medium;
         }
         
         &.list-spacing-s{
-            &>li + li{
+            &>{
                 margin-left: $small
             }
         }
         &.list-spacing-md{
-            &>li + li{
+            &>li{
                 margin-left: $medium
             }
         }
         &.list-spacing-l{
-            &>li + li{
+            &>li{
                 margin-left: $large
             }
         }
         &.list-spacing-xl{
-            &>li + li{
+            &>li{
                 margin-left: $xlarge
             }
         }

@@ -39,7 +39,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-[class$='col'],
+.row > [class*='col'],
 [class*='offset'], .row[class$='cols'] > * {
     padding: 5px;
 }
@@ -497,7 +497,7 @@ section {
         display: none;
     }
 }
-.flex-col, .list.v-list {
+.flex-col, .list.rows {
     -webkit-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
@@ -512,36 +512,36 @@ section {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.list.v-list.list-spacing-s > li + li {
+.list.rows.list-spacing-s > li {
     margin-top: 5px;
 }
-.list.v-list.list-spacing-md > li {
+.list.rows.list-spacing-md > li {
     margin-top: 10px;
 }
-.list.v-list.list-spacing-l > li + li {
+.list.rows.list-spacing-l > li {
     margin-top: 15px;
 }
-.list.v-list.list-spacing-xl > li + li {
+.list.rows.list-spacing-xl > li {
     margin-top: 20px;
 }
-.list.h-list {
+.list.cols {
     -webkit-flex-direction: row;
     flex-direction: row;
     -ms-flex-direction: row;
 }
-.list.h-list li + li {
+.list.cols > li {
     margin-left: 10px;
 }
-.list.h-list.list-spacing-s > li + li {
+.list.cols.list-spacing-s > {
     margin-left: 5px;
 }
-.list.h-list.list-spacing-md > li + li {
+.list.cols.list-spacing-md > li {
     margin-left: 10px;
 }
-.list.h-list.list-spacing-l > li + li {
+.list.cols.list-spacing-l > li {
     margin-left: 15px;
 }
-.list.h-list.list-spacing-xl > li + li {
+.list.cols.list-spacing-xl > li {
     margin-left: 20px;
 }
 #logo {

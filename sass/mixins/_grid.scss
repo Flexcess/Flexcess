@@ -58,7 +58,7 @@ $grid-large-prefix:				'lg' !default;				// Large screen class prefix for grid.
 	// @include flex(0 0 auto);
 }
 
-[class$='#{$grid-column-prefix}'], 
+.#{$grid-row-name} > [class*='#{$grid-column-prefix}'], 
 [class*='#{$grid-column-offset-suffix}'], .#{$grid-row-name}[class$='#{$grid-row-parent-layout-prefix}'] > *{
 	padding: $grid-gutter;
 }	
