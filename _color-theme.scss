@@ -1,0 +1,29 @@
+// assign theme color from here
+@import "color/shades";
+@import "color/blue";
+@import "color/light-blue";
+@import "color/teal";
+@import "color/red";
+@import "color/green";
+@import "color/color-maker";
+
+@include makeColorClass($blue,"blue", $color_choice:"lighten-5");
+
+$colors: (
+    "red": $red,
+    "blue": $blue,
+    "light-blue": $light-blue,
+    "teal": $teal,
+    "green": $green,
+);
+
+// use the colors defined above as variables
+$primary-color-holder: color("blue", "base") !default;
+$secondary-color-holder: color("teal", "lighten-1") !default;
+$success-color-holder: color("green", "base") !default;
+$error-color-holder: color("red", "base") !default;
+$link-color-holder: color("light-blue", "darken-1") !default;
+$link-color-hover-holder: color("light-blue", "darken-1") !default;
+$black: map-get($shades, 'black');
+$white: map-get($shades, 'white');
+$topbar-color: transparentize($white, 15/100);
